@@ -1,0 +1,123 @@
+/* AERO */
+/* Barra de titulo (La barra gris superior) */
+.nav-bar{
+    background: linear-gradient(270deg, #4e4e4e 0%, #a5a4a5 50%, #4e4e4e 110%);
+    color: #ffffff;
+    padding: 22px 0px 8px;
+
+    /* LGTODO: Arreglar los grados del degradado porque apunta en horizontal */
+    /* background: -webkit-linear-gradient(270deg, #4e4e4e 0%, #a5a4a5 50%, #4e4e4e 110%); */
+    
+}
+
+.toolbr-violet{
+background: linear-gradient(270deg, #260827 15%, #684569, #260827, #684569, #260827);
+}
+
+.toolbr-orange{
+    background: linear-gradient(270deg, #d2642a 15%, #dd895d, #d2642a, #dd895d, #d2642a);
+}
+
+#title-bar.main-header {
+    border-bottom: none;
+}
+
+#title-bar #tit-modulo{
+    color: #f3f3f3;
+    margin-left: 11px;
+    font-size: 27px;
+}
+
+#title-bar .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.header-top-menu .navbar-nav.btn-nav-bar >li>a{
+	padding: 0px 0px;
+
+}
+
+.header-top-menu .navbar-nav.btn-nav-bar >li>a img{
+    filter: drop-shadow(0 0px 9px rgba(0, 0, 0, 0.7));
+}
+
+.ctn-nav-btn.col-md-2 {
+    width: 10.666667%;
+}
+
+
+ul.direc-bar li {
+    font-size: 14px;
+    display: inline-block;
+	color:#fff;
+}
+ul.direc-bar li a{
+    color:#fff;
+}
+
+/* toolbar */
+.tool-bar {
+    padding-top:0px;
+	padding-bottom:100px;
+}
+
+.tool-bar.single-page-breadcome{
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.tool-bar .navbar-nav >li>a{
+    padding: 4px 8px;
+}
+
+.tool-bar .navbar-nav .nav-item.dropdown .dropdown-menu {
+    min-width: 169px;
+    background-color: #f5f5f5;
+    color: #000;
+    padding: 2px;
+/*     top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 198px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%); */
+}
+
+.tool-bar .navbar-nav>li .dropdown-menu a{
+    color: #000;
+    padding: 6px 19px;
+}
+
+.tool-bar .navbar-nav>li .dropdown-menu a:hover, .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li a:hover, .header-right-info ul.header-right-menu li .dropdown-header-top.author-log li a:focus, .header-drl-controller-btn.btn-info:active:focus, .btn-info:active:hover {
+    background: #efc38c;
+
+}
+
+.tool-bar .navbar-nav >li>a:hover, .tool-bar .navbar-nav >li>a:focus, .tool-bar .navbar-nav >li>a:active {
+    color: #f8f9fa;
+    text-decoration: none;
+    background: #745d3f47;
+}
+
+
+/* Mantiene los colores del boton seleccionado en el toolbar */
+.header-right-info .nav .open>a, .header-top-menu .nav .open>a:focus, .header-top-menu .nav .open>a:hover{
+	background: #745d3f47;
+}
+
+.header-top-menu .nav .open>a, .header-top-menu .nav .open>a:focus, .header-top-menu .nav .open>a:hover{
+	background: #745d3f47;
+}

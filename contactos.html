@@ -1,0 +1,686 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard V.1 | jeweler - Material Admin Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet"> -->
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+        <!-- modals CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/modals.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+
+    <!-- MODAL CONTACTO -->
+    <div id="modalCrearContacto" class="modal modal-adminpro-general default-popup-PrimaryModal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header header-color-modal bg-color-transp">
+                    <div class="header-top-menu tabl-d-n">
+                        <ul class="nav navbar-nav mai-top-nav btn-nav-bar">
+                            <li class="nav-item">
+                                <a href="#" data-dismiss="modal" class="nav-link"><img src="icons/gtk-go-back-ltr.png" alt=""></a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <h4 class="modal-title">Detalles De Nuevo Contacto</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div class="photo-cont">
+                                <a href="#"><img src="icons/avatar-contact.png" alt=""></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                            <div class="basic-login-inner">
+                                <form action="#">
+
+                                    <!-- NOMBRE -->
+                                    <div class="form-group-inner">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                <label >Nombre:</label>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                <li class="nav-item" id="nvItemNombre">
+                                                    <span data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle a-input">Agregar Nuevo Nombre</span>
+                                                
+                                                    <div role="menu" class="dropdown-header-top author-log dropdown-menu animated fadeIn min-form">
+                                                        <div class="header-min-form">
+                                                            <div class="row">
+                                                                <div class="col-lg-8 col-md-8"><p>Editar Nombre Completo</p></div>
+                                                                <div class="col-lg-4 col-md-4"><a class="btn-hecho-mf" role="button">Hecho</a></div>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="body-min-form">
+
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Primero:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="text" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Segundo:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="text" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Apellido:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="text" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Sufijo:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="text" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- EMAIL -->
+                                    <div class="form-group-inner">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                <label >Email:</label>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                <li class="nav-item" id="nvItemEmail">
+                                                    <span data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle a-input">Agregar Nuevo Email</span>
+                                                
+                                                    <div role="menu" class="dropdown-header-top author-log dropdown-menu animated fadeIn min-form ">
+
+                                                        <div class="header-min-form">
+                                                            <div class="row">
+                                                                <div class="col-lg-8 col-md-8"><p>Editar Dirección E-mail</p></div>
+                                                                <div class="col-lg-4 col-md-4"><a class="btn-hecho-mf" role="button">Hecho</a></div>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div class="body-min-form">
+
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Email:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="email" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Tipo:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <div class="form-select-list">
+                                                                            <select class="form-control custom-select-value" name="account">
+                                                                                <option> </option>
+                                                                                <option>Principal</option>
+                                                                                <option>Hogar</option>
+                                                                                <option>Trabajo</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+             
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- TELEFONO -->
+                                    <div class="form-group-inner">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                                <label >Telefono:</label>
+                                            </div>
+
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                <li class="nav-item" id="nvItemTel">
+                                                    <span data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle a-input">Agregar Nuevo Telefono</span>
+                                                
+                                                    <div role="menu" class="dropdown-header-top author-log dropdown-menu animated fadeIn min-form ">
+                                                        <p>Editar Número de Telefono</p>
+                        
+                                                        <div class="body-min-form">
+
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Código de País:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="text" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Código de Area:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="text" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Numero:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="number" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Extensión:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="number" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>PIN:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <input id="" type="number" class="form-control" placeholder=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group-inner">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cnt-label">
+                                                                        <label>Tipo:</label>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                                                        <div class="form-select-list">
+                                                                            <select class="form-control custom-select-value" name="account">
+                                                                                <option> </option>
+                                                                                <option>Principal</option>
+                                                                                <option>Hogar</option>
+                                                                                <option>Celular</option>
+                                                                                <option>Fax</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                        
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a data-dismiss="modal" href="#">Cancel</a>
+                    <a href="#">Process</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="menuw">
+
+    <nav id="sidebar" class="">
+        <div class="left-custom-menu-adp-wrap comment-scrollbar">
+            <nav class="sidebar-nav left-sidebar-menu-pro">
+                <ul class="metismenu" id="menu1">
+                    <li class="active">
+                        <a class="has-arrow" href="index.html">
+                               <i class="fa big-icon fa-home icon-wrap"></i>
+                               <span class="mini-click-non">Ecommerce</span>
+                            </a>
+                        <ul class="submenu-angle" aria-expanded="true">
+                            <li><a title="Dashboard v.1" href="index.html"><i class="fa fa-bullseye sub-icon-mg" aria-hidden="true"></i> <span class="mini-sub-pro">Dashboard v.1</span></a></li>
+                        </ul>
+                    </li>                    
+                </ul>
+            </nav>
+        </div>
+    </nav>
+</div>
+
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+
+
+        <!-- BARRA NAVEGACION O DE TITULO -->
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!-- Botones nav -->
+                    <div class="ctn-nav-btn col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                        <div class="header-top-menu tabl-d-n">    
+                            <ul class="nav navbar-nav mai-top-nav btn-nav-bar">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img src="icons/gtk-go-back-ltr.png" alt=""></a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link"><img src="icons/gtk-go-back-rtl.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- barra tit -->
+                    <div class="cnt-title-bar col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                        <div class="row">
+                            <h1>Contactos</h1>
+                        </div>
+
+                        <div class="row">
+                            <ul class="direc-bar">
+                                <li><a href="#">Equipo</a> <span class="bread-slash">/</span>
+                                </li>
+                                <li><span class="bread-blod">Contactos</span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Favoritos -->
+                    <div class="ctn-favoritos-btn col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                        <div class="header-top-menu tabl-d-n">   
+                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                <i class="fa fa-bars"></i>
+                        </button> 
+                            <ul class="nav navbar-nav mai-top-nav btn-nav-bar">
+
+
+                                <li class="nav-item"><a href="#" class="nav-link"><img src="icons/favoritos.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            </div>
+
+            
+        </div>
+        <!-- FIN BARRA NAVEGACION O DE TITULO -->
+
+        <!-- BARRA OPCIONES -->
+        <div class="toolbr-orange">
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <!-- Toolbar -->
+                            <div class="tool-bar">
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav navbar-nav mai-top-nav">
+
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                                      Archivo
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                      <a class="dropdown-item" href="#">Nueva Persona</a>
+                                                      <a class="dropdown-item" href="#">Nueva Organizacion</a>
+                                                      <a class="dropdown-item" href="#">Nuevo Grupo</a>
+                                                      <a class="dropdown-item" href="#">Agregar Contacto...</a>
+                                                      <!-- <a class="dropdown-item" href="#">Nuevo Grupo</a> -->
+                                                      <hr class="dropdown-divider">
+                                                      <a class="dropdown-item" href="#">Crear Atajo</a>
+                                                      <a class="dropdown-item" href="#">Borrar</a>
+                                                      <a class="dropdown-item" href="#">Renombrar</a>
+                                                      <a class="dropdown-item" href="#">Propiedades</a>
+                                                      <hr class="dropdown-divider">
+                                                      <a class="dropdown-item" href="#">Cerrar</a>
+                                                    </div>
+                                                </li>
+
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                                      Editar
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                    </div>
+                                                </li>
+
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                                      Ver
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                    </div>
+                                                </li>
+
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                                      Herramientas
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                    </div>
+                                                </li>
+
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                                                      Ayuda
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                      <a class="dropdown-item" href="#">Action</a>
+                                                      <a class="dropdown-item" href="#">Another action</a>
+                                                      <a class="dropdown-item" href="#">Something else here</a>
+                                                    </div>
+                                                </li>
+
+
+                                    
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- CINTA DE OPCIONES O DETALLES -->
+                            <div class="opc-bar container-fluid">
+                                <!-- Input Codigo de Barras -->
+                                <div class="row" >
+                                    <div class="col-md-2">
+                                        <p class="info-cant">
+                                            <span class="info-cant-number">0</span> Elementos <br />
+                                            <span class="info-tx">en esta sección</span>
+                                        </p>
+                                    </div>
+                
+                
+                                    <div class="col-md-7" id="tool_items">
+                                        <div class="row">
+                                            <div class="cont-opc-btns">
+
+                                                <div class="opc-btn">
+                                                    <a class="nav-link tool_item" href="#" role="button" type="button"  data-toggle="modal" data-target="#modalCrearContacto" >
+                                                        <img src="icons/new-cont.png" alt=""><br> <span>Nuevo Contacto</span> 
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            
+                
+                                        </div>
+                
+                                    </div>
+                                </div>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN BARRA OPCIONES -->
+
+
+        <div class="author-area-pro">
+            <div class="container-fluid">
+                <div class="row">
+
+                <!--     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="personal-info-wrap">
+                            <div class="widget-head-info-box">
+                                <div class="persoanl-widget-hd">
+                                    <h2>Jon Royita</h2>
+                                    <p>Founder of Uttara It Park</p>
+                                </div>
+                                <img src="img/notification/5.jpg" class="img-circle circle-border m-b-md" alt="profile">
+                                <div class="social-widget-result">
+                                    <span>100 Tweets</span> |
+                                    <span>350 Following</span> |
+                                    <span>610 Followers</span>
+                                </div>
+                            </div>
+                            <div class="widget-text-box">
+                                <h4>Jhon Royita</h4>
+                                <p>To all the athaists attacking me right now, I can't make you believe in God, you have to have faith.</p>
+                                <div class="text-right like-love-list">
+                                    <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
+                                    <a class="btn btn-xs btn-primary"><i class="fa fa-heart"></i> Love</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/morrisjs/raphael-min.js"></script>
+    <script src="js/morrisjs/morris.js"></script>
+    <script src="js/morrisjs/morris-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+
+    <script>
+        $('#a-input-nombre').click(function()
+            {
+                var data = $(this).text();
+                $(this).remove();
+                $('#nombre').prop("style", "display:block;");
+            }
+        );
+
+        $('#a-input-email').click(function()
+            {
+                var data = $(this).text();
+                $(this).remove();
+                $('#email').prop("style", "display:block;");
+            }
+        );
+
+        $('.btn-hecho-mf').click(function(){
+            var nombre = document.getElementById("nvItemNombre");
+            var email = document.getElementById("nvItemEmail");
+            var tel = document.getElementById("nvItemTel");
+
+            nombre.classList.remove("open");
+            email.classList.remove("open");
+            tel.classList.remove("open");
+            }
+        );
+    </script>
+</body>
+
+</html>
