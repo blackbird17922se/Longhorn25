@@ -166,7 +166,7 @@ body {}
 /* ******************************************* MENU INICIO ******************************************* */
 #menuCollapse {
     height: 48px;
-    width: 90px;
+    width: 120px;
     background: linear-gradient(to top, #222222f5, #cdcdcd94);
     border: 1px solid #6c6c6c;
     border-top-left-radius: 0;
@@ -371,7 +371,7 @@ body {}
 /* MENU DE OPCIONES DE CONFIG (el gris)*/
 .opciones-menu{
     /* height: 16%; */
-    width: 50%;
+    width: 51.5%;
     background-color: #848484;
     position: fixed;
     top: 456px;
