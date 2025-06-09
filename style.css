@@ -288,7 +288,7 @@ body {}
 
 
 /* menu inicio seccion 1 */
-.bx-menu-sec1{
+.menu-left-section{
     /* float: none; */
     /* background-color: aqua; */
     float: left;
@@ -298,9 +298,13 @@ body {}
     margin-top: 26px;
 }
 
+.accesos{
+    margin-top: 25px;
+}
 
-.item{
-    margin: 12px 0px;
+
+.menu-left-section .item{
+    margin: 0px 0px;
     height: 48px;
 }
 
@@ -331,7 +335,7 @@ body {}
 }
 
 /* Seccion programas (la blanca) */
-.box-program-menu {
+.pinned-programs {
     background: #ebebeb;
     backdrop-filter: blur(20px);
     /* padding-right: 2px; */
@@ -369,7 +373,7 @@ body {}
 
 
 /* MENU DE OPCIONES DE CONFIG (el gris)*/
-.opciones-menu{
+.system-actions{
     /* height: 16%; */
     width: 51.5%;
     background-color: #848484;
@@ -392,7 +396,7 @@ body {}
     border-width: 1px 1px 1px 1px;
 }
 
-.opciones-menu .opcion-conf>a{
+.system-actions .opcion-conf>a{
     text-decoration: none;
     font-size: 13px;
     color: #ffffff;
@@ -400,7 +404,7 @@ body {}
 }
 
 
-/* .opciones-menu .sep-op-menu{
+/* .system-actions .sep-op-menu{
     width: 100%;
     background-color: #383838;
     color: #1e1e1e;

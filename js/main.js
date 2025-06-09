@@ -73,7 +73,21 @@
 	});
 	
 
+	/** ********** ICONO SUPERIOR MENU INICIO DINAMICO***************** */
+  const items = document.querySelectorAll('.menu-left-section .item');
+  const imgUser = document.querySelector('.imgUser');
+  const defaultImg = 'img/userImg/airplane.bmp'; // Imagen por defecto
 
+  items.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const newImg = item.getAttribute('data-img');
+      imgUser.src = newImg;
+    });
+
+    item.addEventListener('mouseleave', () => {
+      imgUser.src = defaultImg;
+    });
+  });
 
 
 
