@@ -132,7 +132,7 @@ body {}
     margin-right: 205px;
     transition: all 0.3s;
     box-shadow: -2px 2px 5px #303030;
-    height: 48px;
+    height: 40px;
 }
 
 .mini-navbar .task-bar{
@@ -205,190 +205,158 @@ body {}
 }
 
 .box-menu-ini {
-    border-radius: 7px;
-    text-align: center;
-    /* offset-x | offset-y | blur-radius | color */
-    box-shadow: -2px 2px 5px #303030;
-    /* transform: scale(0); */
-
-    /* ease all para q todos los elementos tengan la transision */
-    /* transition: 1s ease all; */
-
-    /* REFLEJO */
-    /* below hace la sombra hacia abajo, separacion de la sombra al objeto, El gradiente para darle efecto trasparete */
-    /* -webkit-box-reflect: below 70px linear-gradient(transparent, transparent, rgb(0, 0, 0, 0.2))
-        /* height: 500px; */
-    z-index: 10;
-    background: #00000096;
-    backdrop-filter: blur(2px);
-    display: none; /* oculto por defecto */
-
-    /* temporal: */
-    /* transform: translate(-152%, 34%); */
-    /* opacity: 1; */
-    padding: 8px 8px 8px 30px;
-    width: 31%;
+  border-radius: 7px;
+  box-shadow: -2px 2px 5px #303030;
+  background: #00000096;
+  backdrop-filter: blur(2px);
+  display: none;
+    width: 396px;
+    height: 498px;
     position: fixed;
-    /* bottom: 0; */
     bottom: 51px;
     left: 0;
-    height: 535px;
-
-    /* opacity: 0; */
-    /* pointer-events: none; */
-    transition: all 0.3s ease;
+    padding: 4px;
+    z-index: 10;
 }
 
-/* .box-menu-ini .active {
-    opacity: 1;
-    pointer-events: auto;
-} */
 #box-menu-ini.active {
-    display: block;
+  display: block;
+}
+
+.menu-content {
+  display: flex;
+  height: 100%;
+}
+
+/* Sección Izquierda */
+.menu-left-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+    color: white;
+    padding-left: 11px;
+    margin-top: 40px;
 }
 
 /* Imagen de la parte superior del inicio */
 .box-menu-ini .imgUser {
-
-    transition: 1s ease all;
-
-    padding: 0;
-
-    /* transform: translate(-193px, -11px); */
-
-    opacity: 1;
-
-    width: 59px;
-
-    height: 59px;
-
-    filter: brightness(1);
-
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgb(0 0 0 / 28%));
-
+    position: absolute;
+    top: -33px;
+    left: 22%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
     border-radius: 9px;
+    filter: brightness(1);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgb(0 0 0 / 28%));
+    z-index: 5;
+}
 
-    /* display: table-cell; */
+/* .box-menu-ini .imgUser {
+    box-shadow: 0 0 10px #ffffff33;
+    border: 1px solid #ffffff44;
+} */
 
-    top: -26px;
 
-    left: 83px;
 
-    z-index: 12;
+.accesos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+align-items: center;
 
-    margin: 0;
+}
 
-    position: fixed;
+.accesos .item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  /* padding-left: 10px; */
+  transition: background 0.2s ease;
+      width: 100%;
+      /* background-color: #009AD5; */
+}
 
-    /* padding: 0; */
+.accesos .item a{
+  text-decoration: none;
+  font-size: 13px;
+  color: #ffffff;
+  
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  
+  width: 100%;
+  height: 100%;
 
-    /* float: none; */
+}
+
+.item:hover {
+  background: #f9f9f92b;
+  border-radius: 5px;
+  box-shadow: -1px 2px 4px #a5a5a5;
 }
 
 
 
-/* menu inicio seccion 1 */
-.menu-left-section{
-    /* float: none; */
-    /* background-color: aqua; */
-    float: left;
-    width: 45%;
-    list-style: none;
-    padding-right: 10px;
-    margin-top: 26px;
+/* Sección Derecha */
+.menu-right-section {
+  width: 59%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.accesos{
-    margin-top: 25px;
-}
-
-
-.menu-left-section .item{
-    margin: 0px 0px;
-    height: 48px;
-}
-
-.item:hover{
-    background: #f9f9f92b;
-    /* backdrop-filter: blur(1); */
-    border-radius: 5px;
-    box-shadow: -1px 2px 4px #a5a5a5;
-
-}
-
-.item>a{
-    text-decoration: none;
-    font-size: 13px;
-    color: #ffffff;
-    display: block; /* display block: permite que el link cubra todo el area del div q lo contiene */
-    padding: 8px 10px;
-    /* border-radius: 13px; */
-
-}
-
-
-
-/******************* Columna derecha (Programas) ***************/
-.box-menu-sec2{
-    float: left;
-    width: 55%;
-}
-
-/* Seccion programas (la blanca) */
 .pinned-programs {
-    background: #ebebeb;
-    backdrop-filter: blur(20px);
-    /* padding-right: 2px; */
-    /* padding-top: 0px; */
-    /* padding-left: 10px; */
-    /* padding-bottom: 0px; */
-    border-radius: 8px;
-    border-color: #d9d9d9;
-    border-width: 2px;
-    border-style: solid;
-    height: 464px;
-    opacity: 1;
-    z-index: 6;
-    position: relative;
-    /* float: left; */
+  background: #ebebeb;
+  border: 2px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 10px;
+  height: 439px;
+  overflow-y: auto;
 }
 
-.program-item-menu{
-    text-align: left;
-    border-radius: 3px;
+.program-item-menu {
+  text-align: left;
+  padding: 6px;
+  border-radius: 3px;
+  height: 46px;
 }
 
-.program-item-menu:hover{
-    background: #a0e4ff;
+.program-item-menu:hover {
+  background: #afafaf;
 }
 
-.program-item-menu>a{
-    text-decoration: none;
-    font-size: 13px;
-    color: #292929;
-    display: block; /* display block: permite que el link cubra todo el area del div q lo contiene */
-    padding: 8px 10px;
+.program-item-menu a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-
-
 
 /* MENU DE OPCIONES DE CONFIG (el gris)*/
 .system-actions{
-    /* height: 16%; */
-    width: 51.5%;
+    height: 51px;
+    width: 100%;
     background-color: #848484;
-    position: fixed;
+    /* position: fixed; */
     top: 456px;
-    z-index: 2;
+    /* z-index: 2; */
     border-radius: 8px;
-    padding: 20px 0px 2px;
+    padding: 9px 0px 0px 0px;
+    display: block;
 }
 
 
 /* opcion-conf: botones de la seccion 1 */
 .opcion-conf{
     /* padding: 10px; */
-    width: 38%;
+    width: 36%;
     margin: 0;
     display: table-cell;
     border-style: outset;
@@ -412,7 +380,9 @@ body {}
     margin: 0;
 } */
 
-
+.opc-conf-sec-1{
+    width: 100%;
+}
 
 /* opciones config fila 2 */
 
@@ -420,7 +390,8 @@ body {}
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    padding: 3px 4px;
+
+    /* padding: 3px 4px; */
 }
 
 
@@ -428,6 +399,8 @@ body {}
     margin: 0;
     display: table-cell;
     padding-left: 10px;
+       /* background-color: #4099ff; */
+           height: 12px;
 }
 
 
@@ -437,7 +410,9 @@ body {}
    font-size: 13px;
    color: #ffffff;
    display: block;
+
 }
+
 
 /************************************/
 
