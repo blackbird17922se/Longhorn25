@@ -434,7 +434,9 @@ align-items: center;
 	z-index:999;
 	height:100%;
     box-shadow: -2px 2px 5px #303030;
-    border-radius: 1px;
+    border-radius: 2px;
+    padding-left: 12px;
+    padding-top: 3px;
 }
 
 
@@ -561,6 +563,93 @@ align-items: center;
 #sidebar.active .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li > a {
     padding: 20px 20px;
 }
+
+.widget.contacts-widget{
+    height: 100%;
+    /* overflow-y: auto; */
+    padding-top: 10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 0px 10px 2px;
+}
+
+.user-profile img {
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50%; */
+    border: 1px solid #ffffff33;
+}
+
+.user-profile p {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.widget.contacts-widget ul{
+    padding-left: 7px;
+}
+
+
+.contacts-widget ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contacts-widget li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.contacts-widget li a{
+    color: #ffffff;
+
+}
+
+/* Bullet normal: conectado */
+.contacts-widget li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #90ee90; /* Verde claro */
+  border: 2px solid #006400; /* Verde oscuro */
+  border-radius: 50%;
+}
+
+/* Bullet con notificación */
+.contacts-widget li.new-message::before {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #00ffcc; /* Efecto "glow" */
+}
+
+/* Texto con notificación */
+.contacts-widget li.new-message a {
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 3px #00ffcc;
+}
+
+
+
+
+
+
+
+
+
+
+
 .menu-switcher-pro {
 	transition:all .4s ease 0s;
 }
