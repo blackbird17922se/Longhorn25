@@ -443,25 +443,39 @@ body {}
 
 
 
-
-
-
-
-
 /* SIDEBAR */
 #sidebar {
-    min-width: 200px;
-    background-color: var(--aero-color);
-    backdrop-filter: var(--aero-transp-nv);
-    position: fixed;
-    transition: all 0.3s;
-    z-index: 999;
-    height: 100%;
-    box-shadow: -2px 2px 5px #303030;
-    border-radius: 2px;
-    /* padding-left: 12px; */
-    padding-top: 3px;
+  position: fixed;
+  min-width: 200px;
+  height: 100%;
+  background-color: var(--aero-color);
+  backdrop-filter: var(--aero-transp-nv);
+  box-shadow: -2px 2px 5px #303030;
+  border-radius: 2px;
+  transition: all 0.3s;
+  z-index: 999;
+  padding-top: 3px;
+  overflow: hidden; /* importante para que no se desborde el pseudo-elemento */
 }
+
+#sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px; /* o ajusta a lo que se vea natural */
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  clip-path: ellipse(70% 58% at 0% 50%);
+  pointer-events: none;
+}
+
 
 .top-line {
     height: 1px;
@@ -492,7 +506,7 @@ body {}
 
 .widget.contacts-widget {
     height: 215px;
-    padding-top: 6px;
+    padding-top: 3px;
     /* border-top: 2px solid #ff0c0c; */
     width: 100%;
     /* background-color: #ff11f3; */
@@ -645,6 +659,21 @@ body {}
   opacity: 0.6;
 } */
 
+/***************************** WIDGET RELOJ **************************/
+.clock-widget {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.clock-wrapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
+}
+
+/* RELOJ ANALOGICO */
 .clock {
     width: 45px;
     height: 45px;
@@ -653,13 +682,14 @@ body {}
     position: relative;
     background: radial-gradient(circle at center, rgba(40, 40, 40, 0.8), rgba(10, 10, 10, 0.95));
     box-shadow: inset -4px 10px 7px rgba(255, 255, 255, 0.7),   /* brillo superior izquierdo */
-    inset 0px 2px 6px rgba(255, 255, 255, 0.7),            /* sombra interior inferior derecha */
-    0 0 6px rgba(252, 2, 2, 0.6);
-    margin: 10px auto;
+    inset 0px 2px 6px rgba(255, 255, 255, 0.7);
+    /* margin: 10px auto; */
+    margin-left: 31px;
+    margin-top: 8px;
+    margin-bottom: 4px;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 }
-
 
 .hand {
     width: 50%;
@@ -711,6 +741,25 @@ body {}
     left: 51%;
     transform-origin: bottom center;
     /* transform: rotate(0deg) translateY(-16px); */
+}
+
+/* RELOJ DIGITAL */
+.clock-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.digital-time {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 12px;
+  color: #ccc;
 }
 
 

@@ -1,0 +1,84 @@
+#mi-pc-modal{
+    margin: 0;
+    padding: 0;
+}
+.modal-window {
+    height: calc(100vh - 38px);
+    /* background-color: transparent; */
+     background: #000; /* para que se vea el difuminado */
+    /* z-index: 1000; */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f2f2f2e0;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    /* margin: 0; */
+    /* padding: 0; */
+    width: 100%;
+}
+
+/* Sección 1: Cabecera */
+.modal-header-lg {
+    background: linear-gradient(270deg, #2b2b2b 0%, #676767 50%, #000000 110%);
+    color: #ffffff;
+    padding: 10px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#mi-pc-modal h1{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.direc-bar{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Sección 2: Barra de herramientas */
+#mi-pc-modal .modal-toolbar {
+    background: linear-gradient(to bottom right, #4067d6, #85a9f7);
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+    height: 19%;
+}
+
+#contact-modal .modal-toolbar {
+  background: linear-gradient(to bottom right, #d65e40, #f78585);
+      padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+    height: 19%;
+}
+
+.modal-toolbar button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.modal-toolbar button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sección 3: Cuerpo principal */
+.modal-body {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 16px;
+  background-color: #ffffffe0;
+  /* background: linear-gradient(360deg, #ffffff 80%, #bac5d4 99%); */
+}

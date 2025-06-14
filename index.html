@@ -56,6 +56,9 @@
   <!-- modernizr JS
 		============================================ -->
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -129,31 +132,34 @@
         <div class="widget clock-widget">
           <div class="top-line"></div>
           <div class="corner-button"></div>
-          <div class="clock">
-            <div class="tick" style="transform: rotate(0deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(30deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(60deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(90deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(120deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(150deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(180deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(210deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(240deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(270deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(300deg) translateY(-14px);"></div>
-<div class="tick" style="transform: rotate(330deg) translateY(-14px);"></div>
 
+          <div class="clock-wrapper">
+            <div class="clock">
+              <div class="tick" style="transform: rotate(0deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(30deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(60deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(90deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(120deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(150deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(180deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(210deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(240deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(270deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(300deg) translateY(-14px);"></div>
+              <div class="tick" style="transform: rotate(330deg) translateY(-14px);"></div>
+              <!-- Agujas del reloj -->
+              <div class="hand hour" id="hour-hand"></div>
+              <div class="hand minute" id="minute-hand"></div>
+              <div class="hand second" id="second-hand"></div>
+              <div class="center-dot"></div>
+            </div>
 
-
-            <!-- Agujas del reloj -->
-            <div class="hand hour" id="hour-hand"></div>
-            <div class="hand minute" id="minute-hand"></div>
-            <div class="hand second" id="second-hand"></div>
-            <div class="center-dot"></div>
+            <div class="clock-info">
+              <div id="digital-time" class="digital-time">12:34 PM</div>
+              <div id="date" class="date">Jun 07</div>
+            </div>
           </div>
         </div>
-
-
       </div>
     </nav>
   </div>
@@ -171,9 +177,10 @@
           <!-- Img cabecera dimiamica menu inicio -->
 
           <div class="accesos">
-            <div class="item" data-img="icons/menu-ini/sec1/mi-pc.png">
-              <a href="#"> Mi PC </a>
+            <div class="item" data-app="my-pc" data-img="icons/menu-ini/sec1/mi-pc.png">
+              <a href="#">Mi PC</a>
             </div>
+
 
             <div class="item" data-img="icons/menu-ini/sec1/folder-videos.ico">
               <a href="#"> Fotos y Video </a>
@@ -195,7 +202,7 @@
               <a href="#"> Documentos </a>
             </div>
 
-            <div class="item" data-img="icons/menu-ini/sec1/contacts.png">
+            <div class="item" data-app="contacts" data-img="icons/menu-ini/sec1/contacts.png">
               <a href="#"> Contactos </a>
             </div>
 
@@ -339,11 +346,120 @@
         </div>
       </div>
     </div>
-  </div>
+
+
+    <div id="mi-pc-modal" class="modal-window" style="display: none;">
+      <div class="modal-content">
+
+        <!-- Barra superior: Título -->
+        <div class="modal-header-lg header-color-modal">
+          <!-- Botones nav -->
+          <div class="ctn-nav-btn">
+            <div class="header-top-menu">
+              <ul class="nav navbar-nav mai-top-nav btn-nav-bar">
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><img src="icons/gtk-go-back-ltr.png" alt=""></a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link"><img src="icons/gtk-go-back-rtl.png" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- barra tit -->
+          <div class="cnt-title-bar col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <div class="row">
+              <h1>Mi Pc</h1>
+            </div>
+            <div class="row">
+              <ul class="direc-bar">
+                <li><a href="#">Mi Pc</a> <span class="bread-slash">/</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Favoritos -->
+          <div class="ctn-favoritos-btn col-lg-2 col-md-2 col-sm-6 col-xs-12">
+            <div class="header-top-menu tabl-d-n"></div>
+          </div>
+          <button id="close-mi-pc" class="modal-close">✕</button>
+        </div>
+
+        <!-- Barra de herramientas -->
+        <div class="modal-toolbar">
+          <!-- <button>Copiar</button>-->
+          <!-- Puedes agregar íconos o SVGs más adelante -->
+        </div>
+
+        <!-- Contenido dinámico -->
+        <div class="modal-body">
+          <p>Contenido de "Mi PC" (discos, carpetas, etc).</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- Fin del mi-pc-modal -->
+
+
+
+    <div id="contact-modal" class="modal-window" style="display: none;">
+      <div class="modal-content">
+
+        <!-- Barra superior: Título -->
+        <div class="modal-header-lg header-color-modal">
+          <!-- Botones nav -->
+          <div class="ctn-nav-btn">
+            <div class="header-top-menu">
+              <ul class="nav navbar-nav mai-top-nav btn-nav-bar">
+                <li class="nav-item">
+                  <a href="#" class="nav-link"><img src="icons/gtk-go-back-ltr.png" alt=""></a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link"><img src="icons/gtk-go-back-rtl.png" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- barra tit -->
+          <div class="cnt-title-bar col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <div class="row">
+              <h1>Contactos</h1>
+            </div>
+            <div class="row">
+              <ul class="direc-bar">
+                <li><a href="#">Mi Pc</a> <span class="bread-slash">/</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Favoritos -->
+          <div class="ctn-favoritos-btn col-lg-2 col-md-2 col-sm-6 col-xs-12">
+            <div class="header-top-menu tabl-d-n"></div>
+          </div>
+          <button id="close-contact" class="modal-close">✕</button>
+        </div>
+
+        <!-- Barra de herramientas -->
+        <div class="modal-toolbar">
+          <!-- <button>Copiar</button>-->
+          <!-- Puedes agregar íconos o SVGs más adelante -->
+        </div>
+
+        <!-- Contenido dinámico -->
+        <div class="modal-body">
+          <p>Contenido de "Mi PC" (discos, carpetas, etc).</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- Fin del mi-pc-modal -->
+
+
 
 
   </div>
-
   <!-- jquery
 		============================================ -->
   <script src="js/vendor/jquery-1.11.3.min.js"></script>
