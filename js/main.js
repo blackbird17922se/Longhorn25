@@ -127,6 +127,9 @@
 	// setInterval(updateClock, 1000);
 	// updateClock();
 
+
+	/****************** FUNCIONALIDADES DEL MODAL ********************************/
+	 /** FUNCIONALIDAD DEL MODAL DE MI PC */
 	document.querySelector('[data-app="my-pc"]').addEventListener("click", function () {
 		document.getElementById("mi-pc-modal").style.display = "flex";
 		menuBox.classList.remove('active');
@@ -136,7 +139,10 @@
 		document.getElementById("mi-pc-modal").style.display = "none";
 	});
 
-		document.querySelector('[data-app="contacts"]').addEventListener("click", function () {
+
+	/** FUNCIONALIDAD DEL MODAL DE CONTACTOS */
+	// Cerrar y abrir el modal de contactos
+	document.querySelector('[data-app="contacts"]').addEventListener("click", function () {
 		document.getElementById("contact-modal").style.display = "flex";
 		menuBox.classList.remove('active');
 	});
@@ -144,6 +150,13 @@
 	document.getElementById("close-contact").addEventListener("click", function () {
 		document.getElementById("contact-modal").style.display = "none";
 	});
+
+	// RESTAURAR
+	document.getElementById('restore-contact').addEventListener('click', () => {
+		const modal = document.getElementById('contact-modal');
+		modal.classList.toggle('restored');
+	});
+
 
 
 

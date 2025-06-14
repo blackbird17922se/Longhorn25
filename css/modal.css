@@ -1,66 +1,83 @@
-#mi-pc-modal{
-    margin: 0;
-    padding: 0;
-}
 .modal-window {
-    height: calc(100vh - 38px);
-    /* background-color: transparent; */
-     background: #000; /* para que se vea el difuminado */
-    /* z-index: 1000; */
+  height: calc(100vh - 38px);
+  /* background-color: transparent; */
+  background: #000;
+  /* para que se vea el difuminado */
+  /* z-index: 1000; */
+  margin: 0;
+  padding: 0;
 }
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: #f2f2f2e0;
-    box-shadow: 0 0 12px rgba(0,0,0,0.4);
-    border-radius: 6px;
-    overflow: hidden;
-    /* margin: 0; */
-    /* padding: 0; */
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f2f2f2e0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  /* margin: 0; */
+  /* padding: 0; */
+  width: 100%;
 }
+/* Modo restaurado: cambia el tamaño del contenedor completo */
+.modal-window.restored {
+    width: 69%;
+    height: 80%;
+    position: absolute;
+    top: 44%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Opcional: si quieres que también se pueda redimensionar con mouse */
+.modal-window.restored.resizable {
+  resize: both;
+  overflow: auto;
+}
+
+
 
 /* Sección 1: Cabecera */
-.modal-header-lg {
-    background: linear-gradient(270deg, #2b2b2b 0%, #676767 50%, #000000 110%);
-    color: #ffffff;
-    padding: 10px 7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
+.modal-header-lh {
+  background: linear-gradient(270deg, #2b2b2b 0%, #676767 50%, #000000 110%);
+  color: #ffffff;
+  padding: 10px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
 
-#mi-pc-modal h1{
-    margin: 0;
-    font-size: 1.5em;
+.modal-window h1 {
+  margin: 0;
+  font-size: 1.5em;
 }
 
-.direc-bar{
-    margin: 0;
-    padding: 0;
-
+.modal-window .direc-bar {
+  margin: 0;
+  padding: 0;
 }
 
 /* Sección 2: Barra de herramientas */
 #mi-pc-modal .modal-toolbar {
-    background: linear-gradient(to bottom right, #4067d6, #85a9f7);
-    padding: 6px 10px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    gap: 10px;
-    height: 19%;
+  background: linear-gradient(to bottom right, #4067d6, #85a9f7);
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+  height: 19%;
 }
 
 #contact-modal .modal-toolbar {
   background: linear-gradient(to bottom right, #d65e40, #f78585);
-      padding: 6px 10px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    gap: 10px;
-    height: 19%;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+  height: 19%;
 }
 
 .modal-toolbar button {
@@ -70,6 +87,7 @@
   border-radius: 3px;
   cursor: pointer;
 }
+
 .modal-toolbar button:hover {
   background-color: #f0f0f0;
 }
@@ -81,4 +99,29 @@
   padding: 16px;
   background-color: #ffffffe0;
   /* background: linear-gradient(360deg, #ffffff 80%, #bac5d4 99%); */
+}
+
+/* Figura general (cápsula) */
+.longhorn-shape {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(145deg, #eaf0fb, #c8d3e9);
+  border-radius: 25px;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Círculo interno a la izquierda */
+.circle-slot {
+  width: 34px;
+  height: 34px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #a9c4de);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.1),
+    0 0 3px rgba(0, 0, 0, 0.2);
 }
