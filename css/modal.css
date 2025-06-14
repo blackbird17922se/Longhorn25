@@ -1,25 +1,17 @@
+:root {
+  --aero-transp-nv: blur(5px);
+}
+
 .modal-window {
   height: calc(100vh - 38px);
   /* background-color: transparent; */
-  background: #000;
+  /* background: #000; */
   /* para que se vea el difuminado */
   /* z-index: 1000; */
   margin: 0;
   padding: 0;
 }
 
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: #f2f2f2e0;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  overflow: hidden;
-  /* margin: 0; */
-  /* padding: 0; */
-  width: 100%;
-}
 /* Modo restaurado: cambia el tamaño del contenedor completo */
 .modal-window.restored {
     width: 69%;
@@ -30,18 +22,33 @@
     transform: translate(-50%, -50%);
     border-radius: 8px;
     z-index: 1000;
+    background: #ababab96;
+    backdrop-filter: var(--aero-transp-nv);
 }
 
-/* Opcional: si quieres que también se pueda redimensionar con mouse */
-.modal-window.restored.resizable {
-  resize: both;
-  overflow: auto;
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f2f2f204;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  /* margin: 0; */
+  /* padding: 0; */
+  width: 100%;
 }
 
+.modal-window.restored .modal-content{
+  padding: 0 10px 10px 10px;
+}
 
-
+.modal-window.restored .modal-content .modal-header-lh{
+      background: #ababab00;
+      /* backdrop-filter: var(--aero-transp-nv); */
+}
 /* Sección 1: Cabecera */
-.modal-header-lh {
+.modal-window .modal-header-lh {
   background: linear-gradient(270deg, #2b2b2b 0%, #676767 50%, #000000 110%);
   color: #ffffff;
   padding: 10px 7px;
@@ -50,6 +57,27 @@
   align-items: center;
   font-weight: bold;
 }
+
+
+.modal-window.restored .modal-toolbar {
+      /* padding: 10px 16px; */
+      border-radius: 6px 6px 0px 0px;
+}
+
+.modal-window.restored .modal-body {
+    border-radius: 0px 0px 6px 6px;
+    /* height: 100px; */
+}
+/* Opcional: si quieres que también se pueda redimensionar con mouse */
+/* .modal-window.restored.resizable {
+  resize: both;
+  overflow: auto;
+} */
+
+
+
+
+
 
 .modal-window h1 {
   margin: 0;
@@ -62,8 +90,8 @@
 }
 
 /* Sección 2: Barra de herramientas */
-#mi-pc-modal .modal-toolbar {
-  background: linear-gradient(to bottom right, #4067d6, #85a9f7);
+.modal-window .modal-toolbar {
+
   padding: 6px 10px;
   border-bottom: 1px solid #ccc;
   display: flex;
@@ -71,17 +99,16 @@
   height: 19%;
 }
 
+
+#mi-pc-modal .modal-toolbar{
+  background: linear-gradient(to bottom right, #4067d6, #85a9f7);
+}
 #contact-modal .modal-toolbar {
   background: linear-gradient(to bottom right, #d65e40, #f78585);
-  padding: 6px 10px;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  gap: 10px;
-  height: 19%;
 }
 
 .modal-toolbar button {
-  background: #fff;
+  background: #292929;
   border: 1px solid #ccc;
   padding: 4px 10px;
   border-radius: 3px;
@@ -95,11 +122,17 @@
 /* Sección 3: Cuerpo principal */
 .modal-body {
   flex-grow: 1;
-  overflow: auto;
+  overflow-y: auto;
   padding: 16px;
-  background-color: #ffffffe0;
+  background-color: #ffffff;
   /* background: linear-gradient(360deg, #ffffff 80%, #bac5d4 99%); */
 }
+
+.modal-window.restored .modal-body {
+  flex-grow: 1;  /* O flex: 1 1 auto */
+  overflow-y: auto;
+}
+
 
 /* Figura general (cápsula) */
 .longhorn-shape {
