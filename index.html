@@ -59,6 +59,7 @@
 
 
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/navbar.css">
 </head>
 
 <body>
@@ -403,51 +404,56 @@
 
 
 
-    <div id="contact-modal" class="modal-window" style="display: none;">
+    <!-- MODAL DE CONTACTOS -->
+    <div id="contact-modal" class="modal-window" style="">
       <div class="modal-content">
+        <!-- Barra superior del modal -->
+        <div class="modal-header-lh">
 
-        <!-- Barra superior: Título -->
-        <div class="modal-header-lh header-color-modal">
-          <!-- Botones nav -->
-          <div class="ctn-nav-btn">
-            <div class="header-top-menu">
-              <ul class="nav navbar-nav mai-top-nav btn-nav-bar">
-                <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="icons/gtk-go-back-ltr.png" alt=""></a>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link"><img src="icons/gtk-go-back-rtl.png" alt=""></a>
-                </li>
-              </ul>
-
-              <!-- <div class="longhorn-shape">
-                <div class="circle-slot"></div>
-              </div> -->
-
-
-            </div>
+          <!-- Fila superior: botones de ventana -->
+          <div class="window-controls">
+            <button id="restore-contact" class="modal-restore">🗗</button>
+            <button id="close-contact" class="modal-close">✕</button>
           </div>
 
-          <!-- barra tit -->
-          <div class="cnt-title-bar col-lg-8 col-md-8 col-sm-6 col-xs-12">
-            <div class="row">
-              <h1>Contactos</h1>
-            </div>
-            <div class="row">
-              <ul class="direc-bar">
-                <li><a href="#">Mi Pc</a> <span class="bread-slash">/</span></li>
-                <li><a href="#">Contactos</a></li>
-              </ul>
-            </div>
-          </div>
+          <!-- Fila inferior: tres secciones -->
+          <div class="header-sections">
 
-          <!-- Favoritos -->
-          <div class="ctn-favoritos-btn col-lg-2 col-md-2 col-sm-6 col-xs-12">
-            <div class="header-top-menu tabl-d-n"></div>
-          </div>
-          <button id="restore-contact" class="modal-restore">🗗</button>
-          <button id="close-contact" class="modal-close">✕</button>
+            <!-- Navegación -->
+            <div class="nav-btn-section">
+              <a href="#"><img src="icons/btn/arrow-forward-des.png" alt="Adelante"></a>
+              <a href="#"><img src="icons/btn/arrow-back-des.png" alt="Atrás"></a>
+            </div>
 
+            <!-- Título y ruta -->
+            <div class="location-panel">
+              <div class="location-title-row">
+                <h1>Contactos</h1>
+              </div>
+
+              <div class="breadcrumb-row">
+                <ul class="breadcrumb-bar">
+                  <li><a href="#">Mi PC</a> <span class="bread-slash">/</span></li>
+                  <li><a href="#">Contactos</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Favoritos y búsqueda -->
+            <div class="favorites-section">
+              <img src="icons/btn/favoritos.png" alt="Favoritos">
+              <img src="icons/btn/system-search.png" alt="Buscar">
+            </div>
+
+          </div>
         </div>
+
+
+
+
+
+
 
         <!-- Barra de herramientas -->
         <div class="modal-toolbar">
@@ -462,7 +468,7 @@
 
       </div>
     </div>
-    <!-- Fin del mi-pc-modal -->
+    <!-- Fin del modal de contactos -->
 
 
 
