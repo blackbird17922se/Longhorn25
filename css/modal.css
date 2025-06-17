@@ -1,0 +1,232 @@
+:root {
+  --aero-transp-nv: blur(5px);
+}
+
+.modal-window {
+  height: calc(100vh - 38px);
+  margin: 0;
+  padding: 0;
+}
+
+/* Modo restaurado: cambia el tamaño del contenedor completo */
+.modal-window.restored {
+  width: 69%;
+  height: 80%;
+  position: absolute;
+  top: 44%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  z-index: 10;
+  background: #ababab96;
+  backdrop-filter: var(--aero-transp-nv);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f204;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-window.restored .modal-content {
+  padding: 0 10px 10px 10px;
+}
+
+
+/********************************** Sección 1: Cabecera **************************/
+.modal-header-lh {
+  background: linear-gradient(270deg, #2b2b2b 0%, #676767 50%, #000000 110%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 19px;
+}
+
+.modal-window.restored .modal-content .modal-header-lh {
+  background: #ababab00;
+}
+
+.window-controls {
+  display: flex;
+  justify-content: flex-end;
+  /* gap: 8px; */
+}
+
+.window-controls button {
+  background: transparent;
+  border: none;
+  padding-left: 12px;
+
+}
+
+.header-sections {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding-bottom: 1px;
+}
+
+/********** botones nav **********/
+.nav-btn-section {
+  flex: 0 0 8%;
+}
+
+.nav-btn-section a:nth-child(1) img {
+  width: 38px;
+}
+
+.nav-btn-section a:nth-child(2) img {
+  width: 25px;
+}
+
+
+/********** Panel de ubicación **********/
+.location-panel {
+  /* margin-left: 10px; */
+  flex: 1; /* toma todo el espacio restante */
+}
+
+.location-panel h1 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.breadcrumb-bar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 0.9em;
+  color: black;
+}
+
+.breadcrumb-dropdown {
+  display: none;
+  position: absolute;
+  background: #f0f0f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 999;
+}
+
+.breadcrumb-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-dropdown ul li {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.breadcrumb-dropdown ul li:hover {
+  background-color: #ccc;
+}
+
+/* Mostrar dropdown cuando se activa */
+.breadcrumb-bar.show-dropdown .breadcrumb-dropdown {
+  display: block;
+}
+
+
+
+/********** Favoritos **********/
+.favorites-section {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.favorites-section img {
+  width: 38px;
+} 
+
+
+
+/**************************** Sección 2: Barra de herramientas ****************************/
+.modal-window .modal-toolbar {
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+  height: 19%;
+}
+
+.modal-window.restored .modal-toolbar {
+  /* padding: 10px 16px; */
+  border-radius: 6px 6px 0px 0px;
+}
+
+
+#mi-pc-modal .modal-toolbar {
+  background: linear-gradient(to bottom right, #4067d6, #85a9f7);
+}
+
+#contact-modal .modal-toolbar {
+  background: linear-gradient(to bottom right, #d65e40, #f78585);
+}
+
+.modal-toolbar button {
+  background: #292929;
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.modal-toolbar button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sección 3: Cuerpo principal */
+.modal-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: #ffffff;
+  position: static; /* se puso static porque interferia con el ul li de la barra de direcciones*/
+}
+
+.modal-window.restored .modal-body {
+  border-radius: 0px 0px 6px 6px;
+  /* height: 100px; */
+}
+
+.modal-window.restored .modal-body {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+
+/* Figura general (cápsula) */
+.longhorn-shape {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(145deg, #eaf0fb, #c8d3e9);
+  border-radius: 25px;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Círculo interno a la izquierda */
+.circle-slot {
+  width: 34px;
+  height: 34px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #a9c4de);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.1),
+    0 0 3px rgba(0, 0, 0, 0.2);
+}

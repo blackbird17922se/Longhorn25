@@ -1,0 +1,365 @@
+/* AERO */
+/* Barra de titulo (La barra gris superior) */
+.nav-bar {
+  background: linear-gradient(270deg, #4e4e4e 0%, #a5a4a5 50%, #4e4e4e 110%);
+  color: #ffffff;
+  padding: 23px 2px 0px;
+
+  /* LGTODO: Arreglar los grados del degradado porque apunta en horizontal */
+  /* background: -webkit-linear-gradient(270deg, #4e4e4e 0%, #a5a4a5 50%, #4e4e4e 110%); */
+}
+
+/* titulo del modulo */
+#title-module {
+  margin: 0;
+}
+
+#dir-br {
+  border-top: #969696 solid 1.4px;
+  border-right: #969696 solid 1.4px;
+  border-left: #969696 solid 1.4px;
+  background-color: #ffffff17;
+}
+
+/* Barra de direccion */
+.dir-bar {
+  padding: 7px 7px 8px;
+  width: 65%;
+}
+
+.dir-bar:hover {
+  padding: 5.6px 5.6px 8px;
+}
+
+/* funciona pero eñl boton paila */
+/* .dir-bar {
+      padding: 7px 7px 8px;
+  }
+  
+  .dir-bar:hover {
+      padding: 5.6px 5.6px 8px;
+      border-top: #969696 solid 1.4px;
+      border-right: #969696 solid 1.4px;
+      border-left: #969696 solid 1.4px;
+      background-color: #ffffff17;
+  } */
+
+/* .dir-bar {
+      padding: 5.6px 5.6px 8px;
+      border-top: #969696 solid 1.4px;
+      border-right: #969696 solid 1.4px;
+      border-left: #969696 solid 1.4px;
+      background-color: #ffffff17;
+      width: 90%;
+  }  */
+
+#btn-dir-bar {
+  padding: 0;
+  margin: 0;
+  /* display: none; */
+}
+
+#btn-dir-bar .btn-win {
+  background: linear-gradient(180deg, #ffffff 27%, #c8c6d8 62%);
+  color: #000000;
+  padding: 5.8px 2px;
+  border-radius: 1px;
+  border: #ffffff solid 1.5px;
+  outline: #003c74 solid 1.5px;
+  text-decoration: none;
+  float: right;
+}
+
+#btn-dir-bar .btn-win:hover {
+  color: #000000;
+  text-decoration: none;
+  border: #ffa805 solid 1.5px;
+  outline: #003c74 solid 1.5px;
+}
+
+#btn-dir-bar .btn-win:active {
+  background: linear-gradient(0deg, #ffffff 27%, #a8a7ba 62%);
+  color: #000000;
+  border: #ffffff solid 1.5px;
+  outline: #003c74 solid 1.5px;
+  text-decoration: none;
+}
+
+ul.direc-bar li a {
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* selecc personalizado */
+
+.selectBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: transparent solid 1.4px;
+  border-right: transparent solid 1.4px;
+  border-left: transparent solid 1.4px;
+  border-bottom: transparent solid 1.5px;
+  width: 100%;
+  border-radius: 2px;
+  text-indent: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  /* font-weight: bold; */
+  padding: 1px;
+}
+
+.selectBox:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: var(--aero-transp-nv);
+  cursor: pointer;
+  border-top: #969696 solid 1.4px;
+  border-right: #969696 solid 1.4px;
+  border-left: #969696 solid 1.4px;
+  border-bottom: #969696 solid 1.4px;
+}
+
+
+.breadcrumb-node {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* padding: 2px 0px 2px 0px; */
+  border-radius: 0;
+  border: #5e5c5c00 solid 1px;
+  /* transition: background 0.2s; */
+  /* background: #53acff; */
+}
+
+.breadcrumb-node:hover {
+  cursor: pointer;
+  background: linear-gradient(0deg, #666 0%, #999 100%);
+  border: #999 solid 1px;
+  border-radius: 2px;
+
+
+  /* backdrop-filter: var(--aero-transp-nv); */
+}
+
+.breadcrumb-node:active {
+  background: linear-gradient(180deg, #313131 0%, #494949 100%);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.breadcrumb-node:hover span{
+  border-right: #999 solid 1px;
+}
+
+.node-label {
+  color: #fff;
+  padding-right: 6px;
+}
+
+.node-arrow {
+  width: 14px;
+  height: 14px;
+  /* transition: transform 0.2s; */
+  padding: 2px;
+  border-radius: 4px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+
+}
+
+.breadcrumb-node:hover .node-arrow {
+  display: inline;
+  /* background-color: rgba(255, 255, 255, 0.25); */
+  transform: rotate(90deg);
+    /* border-left: #ffffff solid 1px; */
+}
+
+/* Dropdown estilo */
+.breadcrumb-dropdown {
+  display: none;
+  /* position: absolute; */
+  top: 100%;
+  left: 0;
+  background: #f0f0f0f7;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  width: 150px;
+  /* z-index: 999; */
+}
+
+.breadcrumb-dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.breadcrumb-dropdown li {
+  padding: 4px 12px;
+    border: #8df0ff00 solid 1px;
+  /* transition: background 0.2s; */
+}
+
+
+.breadcrumb-dropdown ul li:hover {
+    background-color: #b6f5ff;
+    border: #8defff solid 1px;
+    border-radius: 3px;
+}
+
+.breadcrumb-dropdown li a {
+  color: #000783;
+  text-decoration: none;
+}
+
+#node-contactos .node-arrow {
+  display: none;
+}
+
+
+#node-contactos:hover .node-arrow {
+  display: block;
+  /* background-color: rgb(241, 0, 0); */
+}
+
+
+
+span.selected {
+  position: relative;
+  float: left;
+  height: auto;
+  z-index: 1;
+  width: 95%;
+  border-radius: 2px;
+  text-indent: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  background: transparent;
+
+  border-top: transparent solid 1.4px;
+  border-right: transparent solid 1.4px;
+  border-left: transparent solid 1.4px;
+  border-bottom: transparent solid 1.5px;
+}
+
+
+
+/* Boton listado despliege */
+span.selectArrow {
+  position: relative;
+  float: left;
+  height: auto;
+  z-index: 1;
+  width: 30px;
+  border: transparent solid 1.5px;
+  outline: transparent solid 1.5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background: transparent;
+  color: transparent;
+  border-radius: 2px;
+  /* display: none; */
+}
+
+span.selectArrow.hv {
+  background: linear-gradient(180deg, #ffffff 27%, #c8c6d8 62%);
+  color: #000000;
+
+  border: #ffffff solid 1.5px;
+  outline: #003c74 solid 1.5px;
+}
+
+ul.selectOptions {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 99.1%;
+  border: 1px solid #ccc;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+  background: rgb(250, 250, 250);
+  padding-top: 2px;
+  display: none;
+  margin: 0;
+  list-style: none inside none;
+  padding-left: 0;
+  z-index: 2;
+}
+
+ul.selectOptions.outh {
+  display: none;
+}
+
+li.selectOption {
+  display: block;
+  line-height: 20px;
+  padding: 5px 0 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  list-style: none;
+  margin: 0;
+}
+
+li.selectOption:hover {
+  color: #f6f6f6;
+  background: #4096ee;
+}
+
+.selected img {
+  margin: 0 20px 0 22px;
+}
+
+/* Estilos del input que aparece en reemplazo al span que contiene la barra de direcciones */
+#impDirBar {
+  position: relative;
+  float: left;
+  height: 33px;
+  z-index: 1;
+  width: 95%;
+  border-radius: 2px;
+  text-indent: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  background: #ffffff;
+  border-top: #969696 solid 1.4px;
+  border-right: #969696 solid 1.4px;
+  border-left: #969696 solid 1.4px;
+  color: #000000;
+  display: block;
+
+}
+
+#impDirBar:focus-visible {
+  outline: none;
+
+}
+
+/* selecc personalizado fin*/
+/* --------------------------------------------------------------------------------------------- */
+
+/* linea plateada y negra debajo de la barra nav */
+.cont-lines-sep hr {
+  margin: 0;
+  padding: 0;
+}
+
+.line-sep-bk {
+  border-top: 1px solid #3d3c3c;
+  border-right: 1px solid #3d3c3c;
+  border-left: 1px solid #3d3c3c;
+  background-color: #aaaaaa;
+  height: 1px;
+}
