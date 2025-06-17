@@ -405,7 +405,7 @@
 
 
     <!-- MODAL DE CONTACTOS -->
-    <div id="contact-modal" class="modal-window" style="">
+    <div id="contact-modal" class="modal-window" style="display: none;">
       <div class="modal-content">
         <!-- Barra superior del modal -->
         <div class="modal-header-lh">
@@ -432,18 +432,52 @@
               </div>
 
               <div class="breadcrumb-row">
-                <ul class="breadcrumb-bar">
-                  <li><a href="#">Mi PC</a> <span class="bread-slash">/</span></li>
-                  <li><a href="#">Contactos</a></li>
-                </ul>
+                <div class="selectBox">
+                  <!-- <span class='selected hv' id="cajadir"></span> -->
+                  <div class="breadcrumb-node" id="node-pc">
+                    <span class="node-label">Mi PC</span>
+                    <img class="node-arrow" src="./icons/btn/caret-right-solid-w.svg" alt="Abrir">
+
+                    <!-- Dropdown al hacer clic -->
+                    <div class="breadcrumb-dropdown">
+                      <ul>
+                        <li><a href="#"> <img src="./icons/location-icon-sm/desktop.png" alt=""> Desktop</a></li>
+                        <li><a href="#"> <img src="./icons/location-icon-sm/document-open.png" alt="">Documents</a></li>
+                        <li><a href="#"> <img src="./icons/location-icon-sm/computer.png" alt="">Computer</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- <span class="bread-slash">/</span> -->
+
+                  <div class="breadcrumb-node" id="node-contactos">
+                    <span class="node-label">Contactos</span>
+                    <img class="node-arrow" src="./icons/btn/caret-right-solid-w.svg" alt="Abrir">
+
+                    <!-- Dropdown de contactos (si aplica) -->
+                    <div class="breadcrumb-dropdown">
+                      <ul>
+                        <li><a href="#">Documentos</a></li>
+                        <li><a href="#">Música</a></li>
+                        <li><a href="#">Imágenes</a></li>
+                        <li><a href="#"><b>Contactos</b></a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Mi PC</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
 
             </div>
 
             <!-- Favoritos y búsqueda -->
             <div class="favorites-section">
-              <img src="icons/btn/favoritos.png" alt="Favoritos">
+
               <img src="icons/btn/system-search.png" alt="Buscar">
+              <img src="icons/btn/favoritos.png" alt="Favoritos">
             </div>
 
           </div>
@@ -510,6 +544,7 @@
   <!-- main JS
 		============================================ -->
   <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 
 </html>

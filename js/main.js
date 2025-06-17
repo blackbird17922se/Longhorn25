@@ -129,7 +129,7 @@
 
 
 	/****************** FUNCIONALIDADES DEL MODAL ********************************/
-	 /** FUNCIONALIDAD DEL MODAL DE MI PC */
+	/** FUNCIONALIDAD DEL MODAL DE MI PC */
 	document.querySelector('[data-app="my-pc"]').addEventListener("click", function () {
 		document.getElementById("mi-pc-modal").style.display = "flex";
 		menuBox.classList.remove('active');
@@ -155,6 +155,23 @@
 	document.getElementById('restore-contact').addEventListener('click', () => {
 		const modal = document.getElementById('contact-modal');
 		modal.classList.toggle('restored');
+	});
+
+
+
+	/** FUNCIONALIDAD DEL DROPDOWN DE LA PANERA DE NAVEGACIÓN */
+
+	const toggleBtn = document.querySelector('.breadcrumb-toggle');
+	const breadcrumbBar = document.querySelector('.breadcrumb-bar');
+
+	toggleBtn.addEventListener('click', () => {
+		breadcrumbBar.classList.toggle('show-dropdown');
+	});
+
+	document.addEventListener('click', (e) => {
+		if (!breadcrumbBar.contains(e.target)) {
+			breadcrumbBar.classList.remove('show-dropdown');
+		}
 	});
 
 
