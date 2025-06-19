@@ -187,3 +187,52 @@ document.querySelectorAll('.node-arrow').forEach(arrow => {
 document.addEventListener('click', () => {
     document.querySelectorAll('.breadcrumb-dropdown').forEach(drop => drop.style.display = 'none');
 });
+
+
+// document.querySelectorAll('.x.node-arrow').forEach(arrow => {
+//     arrow.addEventListener('click', (e) => {
+//         e.stopPropagation();
+//         const node = e.target.closest('.breadcrumb-btn-list');
+//         const dropdown = node.querySelector('.breadcrumb-dropdown-dir');
+//         const btnList = node;
+
+//         // Cierra todos los demás dropdowns y botones abiertos
+//         document.querySelectorAll('.breadcrumb-dropdown-dir').forEach(d => d.style.display = 'none');
+//         document.querySelectorAll('.breadcrumb-btn-list').forEach(b => b.classList.remove('open'));
+
+//         // Alterna el actual
+//         const isOpen = dropdown.style.display === 'block';
+//         dropdown.style.display = isOpen ? 'none' : 'block';
+//         if (!isOpen) btnList.classList.add('open');
+//     });
+// });
+
+// document.addEventListener('click', () => {
+//     document.querySelectorAll('.breadcrumb-dropdown-dir').forEach(drop => drop.style.display = 'none');
+//     document.querySelectorAll('.breadcrumb-btn-list').forEach(b => b.classList.remove('open'));
+// });
+
+
+const toggleBtn = document.getElementById("toggle-dir-dropdown");
+const dropdown = document.querySelector(".breadcrumb-dropdown-dir");
+const selectBox = document.querySelector(".selectBox");
+
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // evita cierre inmediato
+  const isOpen = dropdown.style.display === "block";
+  dropdown.style.display = isOpen ? "none" : "block";
+
+  if (!isOpen) {
+    selectBox.classList.add("open");
+  } else {
+    selectBox.classList.remove("open");
+  }
+});
+
+// Cierra si se hace clic fuera
+document.addEventListener("click", () => {
+  dropdown.style.display = "none";
+  selectBox.classList.remove("open");
+});
+
+

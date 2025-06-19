@@ -1,94 +1,31 @@
-        <!-- Barra superior: Título -->
-        <div class="modal-header-lh">
-          <!-- Botones nav -->
-          <div class="ctn-nav-btn">
-            <div class="header-top-menu">
-              <ul class="nav-btn-section">
-                <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="icons/btn/arrow-cancel.png" alt=""></a>
-                </li>
-              </ul>
-            </div>
+<div class="selectBox">
+                  <!-- <span class='selected hv' id="cajadir"></span> -->
+                  <div class="breadcrumb-node" id="node-pc">
+                    
+                  </div>
 
-          </div>
+                  <div class="breadcrumb-node" id="node-contactos">
+                   
+                  </div>
 
-          <!-- barra tit -->
-          <div class="cnt-title-bar col-lg-8 col-md-8 col-sm-6 col-xs-12">
-            <div class="row">
-              <h1>Contactos</h1>
-            </div>
-            <div class="row">
-              <ul class="direc-bar">
-                <li><a href="#">Mi Pc</a> <span class="bread-slash">/</span></li>
-                <li><a href="#">Contactos</a></li>
-              </ul>
-            </div>
-          </div>
+                  <button class="breadcrumb-toggle-btn" id="toggle-dir-dropdown">
+                    <img class="node-arrow" src="./icons/btn/caret-down-solid.svg" alt="Abrir">
+                  </button>
 
-          <!-- Favoritos -->
-          <div class="ctn-favoritos-btn col-lg-2 col-md-2 col-sm-6 col-xs-12">
-            <div class="header-top-menu tabl-d-n"></div>
-          </div>
-          <button id="restore-contact" class="modal-restore">🗗</button>
-          <button id="close-contact" class="modal-close">✕</button>
-
-        </div>
+                  <div class="breadcrumb-btn-list" id="node-direcciones">
+                    <!-- Botón de desplegar -->
 
 
-
-
-
-        /********************************** Sección 1: Cabecera **************************/
-.modal-window .modal-header-lh {
-  background: linear-gradient(270deg, #2b2b2b 0%, #676767 50%, #000000 110%);
-  color: #ffffff;
-  padding: 10px 7px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
-
-.modal-window.restored .modal-content .modal-header-lh {
-  background: #ababab00;
-}
-
-.modal-window .nav-btn-section {
-  width: 30%;
-
-}
-
-.modal-window .nav-url-section{
-width: 40%;
-
-}
-
-.modal-window .favorites-section{
-  width: 30%;
-
-}
-
-.nav-btn-section img {
-    width: 39px;
-    margin-left: 13px;
-}
-
-.modal-window.restored .modal-toolbar {
-  /* padding: 10px 16px; */
-  border-radius: 6px 6px 0px 0px;
-}
-
-.modal-window.restored .modal-body {
-  border-radius: 0px 0px 6px 6px;
-  /* height: 100px; */
-}
-
-.modal-window h1 {
-  margin: 0;
-  font-size: 1.5em;
-}
-
-.modal-window .direc-bar {
-  margin: 0;
-  padding: 0;
-}
+                    <!-- Dropdown -->
+                    <div class="breadcrumb-dropdown-dir">
+                      <ul>
+                        <li><a href="#">Documentos</a></li>
+                        <li><a href="#">Música</a></li>
+                        <li><a href="#">Imágenes</a></li>
+                        <li><a href="#"><b>Contactos</b></a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Mi PC</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>

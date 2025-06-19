@@ -405,7 +405,7 @@
 
 
     <!-- MODAL DE CONTACTOS -->
-    <div id="contact-modal" class="modal-window" style="display: none;">
+    <div id="contact-modal" class="modal-window" style="">
       <div class="modal-content">
         <!-- Barra superior del modal -->
         <div class="modal-header-lh">
@@ -432,6 +432,7 @@
               </div>
 
               <div class="breadcrumb-row">
+
                 <div class="selectBox">
                   <!-- <span class='selected hv' id="cajadir"></span> -->
                   <div class="breadcrumb-node" id="node-pc">
@@ -447,8 +448,6 @@
                       </ul>
                     </div>
                   </div>
-
-                  <!-- <span class="bread-slash">/</span> -->
 
                   <div class="breadcrumb-node" id="node-contactos">
                     <span class="node-label">Contactos</span>
@@ -466,8 +465,26 @@
                       </ul>
                     </div>
                   </div>
-                </div>
 
+                  <!-- Este contenedor agrupa el botón y el dropdown -->
+                  <div class="breadcrumb-btn-list">
+                    <button class="breadcrumb-toggle-btn" id="toggle-dir-dropdown">
+                      <img class="node-arrow" src="./icons/btn/caret-down-solid.svg" alt="Abrir">
+                    </button>
+
+                    <div class="breadcrumb-dropdown-dir">
+                      <ul>
+                        <li><a href="#">Documentos</a></li>
+                        <li><a href="#">Música</a></li>
+                        <li><a href="#">Imágenes</a></li>
+                        <li><a href="#"><b>Contactos</b></a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Mi PC</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
 
